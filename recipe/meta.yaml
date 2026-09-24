@@ -1,13 +1,13 @@
 {% set name = "reference-handler" %}
-{% set version = "0.9.1" %}
-{% set sha256 = "91db08870b6cf37bd9a595046f84b2ed014a948366552d4705288c3da4fffa8f" %}
+{% set version = "0.9.2" %}
+{% set sha256 = "17bddc699a0ba1fd39d8b515248ea55c5f729462819447f5a82d5d563b51ff66" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/r/reference-handler/reference_handler-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/r/reference-handler/reference_handler-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -21,7 +21,7 @@ requirements:
     - python >=3.7
     - setuptools
   run:
-    - bibtexparser
+    - bibtexparser <2
     - python >=3.7
 
 test:
