@@ -21,7 +21,7 @@ requirements:
     - python >=3.7
     - setuptools
   run:
-    - bibtexparser
+    - bibtexparser <2
     - python >=3.7
 
 test:
